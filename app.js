@@ -21,16 +21,16 @@ app.get('/', function (req, res) {
   res.send('Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
     '/hello/student_Number ---> display hello message to Student example /hello/1 <br>' +
-    '<br><a href="http://0.0.0.0:3002/hello/1">student1</a><br>'+
-    '<br><a href="http://0.0.0.0:3002/hello/2">student2</a><br>'+
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/hello/1">student1</a><br>'+
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/hello/2">student2</a><br>'+
     'To display information in h1 format'+
-    '<br><a href="http://0.0.0.0:3002/big">Big<br></a>' +
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/big">Big<br></a>' +
     '/json   to get json data of a student<br>' +
-    '<br><a href="http://0.0.0.0:3002/json"></a><br>'+
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/json"></a><br>'+
     '/student/Student sid to get student details example :1,2 <br>'+
     '/student/1  or  student/2'+
-    '<br><a href="http://0.0.0.0:3002/student/1">student1</a><br>'+
-    '<br><a href="http://0.0.0.0:3002/student/2">student2</a><br>'+
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/student/1">student1</a><br>'+
+    '<br><a href="https://quiet-mountain-47804.herokuapp.com/student/2">student2</a><br>'+
     '/greeting/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
