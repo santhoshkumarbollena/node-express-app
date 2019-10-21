@@ -1,14 +1,8 @@
 {
-  "name": "node-express-app",
-  "description": "A super simple web app with Node.js and the Express web framework",
+  "name": "node-express-app-for-students",
+  "description": "Node js app to diaplay student information",
   "version": "1.0.0",
-  "author": "Denise Case",
-  "bugs": {
-    "url": "https://github.com/denisecase/node-express-app/issues"
-  },
-  "contributors": [
-    "Denise Case <dcase@nwmissouri.edu> (https://github.com/profcase)"
-  ],
+  "author": "Santhosh kumar bollena",
   "dependencies": {
     "config": "latest",
     "express": "latest",
@@ -17,7 +11,6 @@
   "devDependencies": {
     "nodemon": "latest"
   },
-  "homepage": "https://node-express-app-563.herokuapp.com/",
   "keywords": [
     "Express.js",
     "JavaScript",
@@ -25,11 +18,11 @@
     "app",
     "web"
   ],
-  "license": "MIT",
+  "license": "none",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/denisecase/node-express-app"
+    "url": "https://github.com/santhoshkumarbollena/node-express-app"
   },
   "scripts": {
     "dev": "nodemon app.js",

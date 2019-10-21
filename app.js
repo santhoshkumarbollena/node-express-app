@@ -20,9 +20,17 @@ const port = process.env.PORT || config.get("port");
 app.get('/', function (req, res) {
   res.send('Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
-    '/hello <br>' +
-    '/big <br>' +
-    '/json <br>' +
+    '/hello/student_Number ---> display hello message to Student example /hello/1 <br>' +
+    '<br><a href="http://0.0.0.0:3002/hello/1">student1</a><br>'+
+    '<br><a href="http://0.0.0.0:3002/hello/2">student2</a><br>'+
+    'To display information in h1 format'+
+    '<br><a href="http://0.0.0.0:3002/big">Big<br></a>' +
+    '/json   to get json data of a student<br>' +
+    '<br><a href="http://0.0.0.0:3002/json"></a><br>'+
+    '/student/Student sid to get student details example :1,2 <br>'+
+    '/student/1  or  student/2'+
+    '<br><a href="http://0.0.0.0:3002/student/1">student1</a><br>'+
+    '<br><a href="http://0.0.0.0:3002/student/2">student2</a><br>'+
     '/greeting/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
@@ -32,10 +40,23 @@ app.get('/', function (req, res) {
   )
 })
 
+var student1={}
+student1.sid="1";
+student1.FirstName="Santhosh";
+student1.LastName="Bollena";
+var student2={}
+student2.sid="2";
+student2.FirstName="Student 2 FirstName";
+student2.LastName="Student 2 LastName";
 // or use the new arrow function syntax
 // respond with text
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
+app.get('/hello/:studentnumber', (req, res) => {
+  if(req.params.studentnumber=="1"){
+    res.send(`<h1>Hello </h1><br><h2>${student1.FirstName}</h2>`)
+  }
+  else{
+    res.send(`<h1>Hello </h1><br><h2>${student2.FirstName}</h2>`)
+  }
 })
 
 // or respond with html
@@ -45,7 +66,7 @@ app.get('/big', (req, res) => {
 
 // or respond with JSON
 app.get('/json', (req, res) => {
-  res.send('{"name" : "Nandini"}')
+  res.send('{"FirstName" : "Santhosh","LastName":"Bollena"}')
 })
 
 // :name indicates a parameter at this location in the URI
@@ -56,6 +77,15 @@ app.get('/greeting/:id', (req, res) => {
 // combine your skills and get creative
 app.get('/yo/:buddy', (req, res) => {
   res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
+})
+app.get('/student/:buddy', (req, res) => {
+  
+  if(req.params.buddy=="1"){
+    res.send(`<h1>${student1.FirstName}</h1><br><h2>${student1.LastName}</h2>`)
+  }
+  else{
+    res.send(`<h1>${student2.FirstName}</h1><br><h2>${student2.LastName}</h2>`)
+  }
 })
 
 // provide multiple query parameters (named first and last) with ? and &
