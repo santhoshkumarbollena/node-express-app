@@ -32,11 +32,11 @@ app.get('/', function (req, res) {
     '<br><a href="https://quiet-mountain-47804.herokuapp.com/student/1">student1</a><br>'+
     '<br><a href="https://quiet-mountain-47804.herokuapp.com/student/2">student2</a><br>'+
     '/greeting/yourname <br>' +
-    '/yo/Dr.Rogers <br>' +
+    '<br> Give your name to display in browser<br>'+
+    '/Santhosh <br>' +
     '/fortune <br>' +
     '/fancy/?first=Denise&last=Case <br>' +
-    '<br> <br>' +
-    'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
+    '<br> <br>' 
   )
 })
 
@@ -75,8 +75,8 @@ app.get('/greeting/:id', (req, res) => {
 })
 
 // combine your skills and get creative
-app.get('/yo/:buddy', (req, res) => {
-  res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
+app.get('/:buddy', (req, res) => {
+  res.send(`<h1>Hi, ${req.params.buddy}!</h1>`)
 })
 app.get('/student/:buddy', (req, res) => {
   
